@@ -9,7 +9,7 @@ function BookList() {
   const [books, setBooks] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
-//   const [totalDuration, setTotalDuration] = useState(0);
+
 
   useEffect(() => {
     const fetchBooks= async () => {
@@ -26,10 +26,7 @@ function BookList() {
     fetchBooks();
   }, []);
 
-//   const calculateTotalDuration = (subscriptions) => {
-//     const total = subscriptions.reduce((acc, curr) => acc + parseInt(curr.duration), 0);
-//     setTotalDuration(total);
-//   };
+ 
 
   const handleEdit = (title) => {
     navigate(`/book/update/${title}`);
@@ -43,7 +40,6 @@ function BookList() {
     try {
       await axios.delete(`http://localhost:8000/book/delete/${title}`);
       setBooks(books.filter((book) => book.title !== title));
-    //   calculateTotalDuration(books.filter((book) => subscription.title !== title));
       console.log("book deleted successfully!");
       alert("book deleted successfully!");
     } catch (error) {
@@ -94,8 +90,7 @@ function BookList() {
 
   return (
     <div className="subscription-list-container">
-      <h2 className="subscription-list-header">Book List</h2>
-      {/* <p>Total Duration: {totalDuration}</p> */}
+      <h2 className="subscription-list-header">MY BOOK COLLECTION</h2>
       <input
         className="search-input"
         type="text"
