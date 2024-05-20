@@ -1,34 +1,43 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import axios from 'axios'
+import BookList from './components/BookList';
+import BookAdd from './components/BookAdd';
+import EditBook from './components/EditBook'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  axios.defaults.baseURL = "http://localhost:8000"; //  backend server URL
   return (
+    <BrowserRouter>
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className='app' >
+    <Routes>
+          {/* <Route path='/' element={<Home/>}/>
+          <Route path='/subs' element={<Subscription/>}/>
+          <Route path='/user/get/:id' element={<Profile/>}/>
+          <Route path="/user/register-manager" element={<ManagerRegister />} />      
+          <Route path="/user/allmanagers" element={<ManagerList />} />
+          <Route path="/user/allcustomers" element={<CustomerList />} />  
+          <Route path="/user/register-admin" element={<AdminRegister />} />
+          <Route path="/user/allAdmins" element={<AdminList />} />
+          <Route path="/user/update-manager/:Id" element={<EditManager />} />
+          <Route path="/user/register-customer" element={<CustomerRegister />}/>
+          <Route path="/user/update-customer/:Id" element={<EditCustomer/>} />
+          <Route path="/user/update-admin/:Id" element={<EditAdmin />} />
+          <Route path="/user/login-customer" element={<CustomerLogin />} />
+          <Route path="/user/login-adminAndManger" element={<AdminManagerLogin />}/>
+          <Route path="/user/adminHome" element={<AdminHome />}/>
+          <Route path="/user/managerHome" element={<ManagerHome />}/> */}
+          {/* Subscription */}
+          <Route path="/book/" element={<BookList />} />
+          <Route path="/book/add" element={<BookAdd  />} />   
+          <Route path="/book/update/:title" element={< EditBook />} />
+          
+    </Routes>
+    </div>
     </>
+    </BrowserRouter>
   )
 }
 
