@@ -53,12 +53,13 @@ function EditBook() {
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
     <div>
-      <h2>Edit Book details</h2>
+      <h2><center>Edit Book details</center></h2>
+      <br/>
       <form onSubmit={handleSubmit}>
         <table>
           <tbody>
             <tr>
-              <td>title:</td>
+              <td>TITLE:</td>
               <td>
                 <input
                   type="text"
@@ -71,7 +72,7 @@ function EditBook() {
               </td>
             </tr>
             <tr>
-              <td>author:</td>
+              <td>AUTHOR:</td>
               <td>
                 <input
                   type="text"
@@ -84,7 +85,7 @@ function EditBook() {
               </td>
             </tr>
             <tr>
-              <td>genre:</td>
+              <td>GENRE:</td>
               <td>
                 <input
                   type="text"
@@ -97,7 +98,7 @@ function EditBook() {
               </td>
             </tr>
             <tr>
-              <td>description:</td>
+              <td>DESCRIPTION:</td>
               <td>
                 <input
                   type="text"
@@ -111,12 +112,11 @@ function EditBook() {
             </tr>
           </tbody>
         </table>
-        <button type="submit">Update</button>
+        <br/><center>
+        <button type="submit">Update</button></center>
       </form>
     </div>
   </div>
-  
-
   );
 }
 

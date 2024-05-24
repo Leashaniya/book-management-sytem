@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-// import "./SubscriptionAdd.css";
-
-// Initial state of the form fields
+import "./BookAdd.css";
 
 const initialState = {
   title: "", 
@@ -45,6 +43,7 @@ function BookAdd() {
 
   return (
     <div className="main-form">
+      <center>
       <h2>Add Book to the Collection</h2>
       <form onSubmit={handleSubmit} className="form">
         <div className="form1">
@@ -100,6 +99,7 @@ function BookAdd() {
         <div><button type="submit">Add</button></div>
         </div>
         </form>
+        </center>
         </div>
       
       

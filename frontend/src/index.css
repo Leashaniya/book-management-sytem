@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *{
   padding: 0 ;
@@ -15,25 +18,9 @@ a{
   text-decoration: none;
   color: inherit;
 }
-/* .app{
-  width: 100%;
-  margin: auto;
-} */
-
-/* fading
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-} */
 .leasha{
   display: none;
 }
-
-/* Define unique styles for the Payment List component */
 
 .payment-list-container {
   font-family: Arial, sans-serif;
