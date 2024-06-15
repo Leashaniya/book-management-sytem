@@ -25,5 +25,3 @@ app.use(bodyParser.json());
 const bookRouter=require("./routes/Book.route");
 app.use("/book",bookRouter)
 
-const userRouter=require("./routes/User.route");
-app.use("/user",userRouter)

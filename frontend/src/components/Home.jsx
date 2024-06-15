@@ -42,21 +42,10 @@ const Home = () => {
           border: 'none',
           borderRadius: '5px'
         }}
-        onClick={() => navigate('/user/login')}>
-          LOGIN
+        onClick={() => navigate('/book')}>
+          HERE IT IS
         </button>
-        <button style={{ 
-          margin: '10px', 
-          padding: '20px 40px', 
-          fontSize: '24px', 
-          fontWeight: 'bold', 
-          backgroundColor: 'lightgreen',
-          border: 'none',
-          borderRadius: '5px'
-        }}
-        onClick={() => navigate('/user/signup')}>
-          SIGNUP
-        </button>
+        
       </div>
     </div>
   );
