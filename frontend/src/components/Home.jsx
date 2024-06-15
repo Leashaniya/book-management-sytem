@@ -15,6 +15,7 @@ const Home = () => {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center'
+      
     }}>
       <div style={{
         display: 'flex',
