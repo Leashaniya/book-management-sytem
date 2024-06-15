@@ -2,19 +2,15 @@ const express = require("express");
 const router = express.Router();
 const {
   customerLogin,
-  logoutUser,
   getUserById,
   customerRegister,
 } = require("../controllers/User.controller");
-// const { protect } = require("../middleware/authMiddleware");
-// const { customerAuthentication } = require("../middleware/authentication");
+const { customerAuthentication } = require("../middleware/authMiddleware");
 
 // Register a new customer
-router.post("/register-customer", customerRegister);
+router.post("/signup", customerRegister);
 // Login a user
-router.post("/login-customer", customerLogin);
-// Logout a user
-router.post("/logout", logoutUser);
+router.post("/login", customerLogin);
 // Get user by ID
 router.get("/get/:id", getUserById);
 

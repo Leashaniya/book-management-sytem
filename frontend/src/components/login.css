@@ -1,0 +1,87 @@
+/* AdminManagerLogin.css */
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+  }
+    
+  .h2Sush {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+    
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+     margin-bottom: 5px;
+  }
+    
+  .inputClass {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+    
+  button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+    
+  button:hover {
+    background-color: #0056b3;
+  }
+    
+  .error {
+    color: red;
+    margin-top: 5px;
+  }
+    /* AdminManagerLogin.css */
+  .mnShit {
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+  }
+  .shittyForm {
+     width: 500px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     align-items: center;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: rgba(255, 255, 255, 0.7);
+     padding: 10px;
+     border-radius: 10px;
+  }
+  .mnForm {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+  }
+  .fashions {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #D9D9D9;
+      border-radius: 10px;
+      box-sizing: border-box;
+  }
+  .mkcntr {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+  
+  

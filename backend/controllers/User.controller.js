@@ -31,7 +31,7 @@ const customerRegister = expressAsyncHandler(async (req, res) => {
   do {
     // Generate a random four-digit number
     const randomNum = Math.floor(1000 + Math.random() * 9000);
-    newId = "CU" + randomNum.toString();
+    newId = "CUSTOMER" + randomNum.toString();
   } while (await User.findOne({ id: newId })); // Check if the generated ID already exists
 
   Id = newId;
@@ -125,19 +125,19 @@ const customerLogin = async (req, res) => {
 
 
 
-//logout
-const logoutUser = async (req, res) => {
-  try {
-    // Clear the token on the client side (e.g., by setting it to null)
-    res.clearCookie("token"); // Clear token cookie
+// //logout
+// const logoutUser = async (req, res) => {
+//   try {
+//     // Clear the token on the client side (e.g., by setting it to null)
+//     res.clearCookie("token"); // Clear token cookie
 
-    // Send response indicating successful logout
-    res.status(200).json({ success: true, message: "Logout successful" });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, message: "Server error" });
-  }
-};
+//     // Send response indicating successful logout
+//     res.status(200).json({ success: true, message: "Logout successful" });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ success: false, message: "Server error" });
+//   }
+// };
 
 
 //get user by id
@@ -160,6 +160,5 @@ const getUserById = async (req, res) => {
 module.exports = {
   customerRegister,  
   customerLogin,
-  logoutUser,
   getUserById,
 };
