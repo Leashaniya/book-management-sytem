@@ -3,31 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  padding: 0 ;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Outfit;
-  scroll-behavior: smooth;
-}
-body{
+body {
   min-height: 100vh;
-  background-color: #d7cdff;
+  background-image: url('./assets/rose.jpg');
+  background-size: cover;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
-.leasha{
-  display: none;
-}
 
-.payment-list-container {
+.book-list-container {
   font-family: Arial, sans-serif;
   margin: 20px;
+  padding: 20px;
+  background: rgba(248, 245, 212, 0.9);
+  border-radius: 10px;
 }
 
-.payment-list-header {
+.book-list-header {
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -47,41 +42,45 @@ a{
   border: none;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
 .create-button:hover {
-  background-color: #005f75;
+  background-color: #004a5a;
 }
 
-.payment-table {
+.book-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
-
-.payment-table td {
+.book-table th, .book-table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
   text-align: left;
 }
 
-th {
+.book-table th {
   background-color: #f2f2f2;
 }
 
-.payment-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+.book-table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-.payment-table tr:hover {
+.book-table tr:hover {
   background-color: #ddd;
 }
 
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
 .action-buttons button {
-  padding: 6px 12px;
-  margin-right: 5px;
+  padding: 8px 16px;
   background-color: #008CBA;
   color: white;
   border: none;
@@ -93,16 +92,3 @@ th {
   background-color: #005f75;
 }
 
-.report-buttons button {
-  margin-right: 10px;
-  padding: 10px 20px;
-  background-color: #005f75;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.report-buttons button:hover {
-  background-color: #005f75;
-}

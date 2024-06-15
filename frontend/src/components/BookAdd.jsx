@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import "./BookAdd.css";
 
 const initialState = {
   title: "", 
@@ -42,66 +41,69 @@ function BookAdd() {
   };
 
   return (
-    <div className="main-form">
-      <center>
-      <h2>Add Book to the Collection</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <div className="form1">
-      <div className="devb">
-      <label>
-        Book Title: 
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        </div>
-        <div className="devb">
-        <label>
-        author:
-          <input
-            type="text"
-            name="author"
-            value={formData.author}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        </div>
-        <div className="devb">
-        <label>
-        genre:
-        <input
-            type="text"
-            name="genre"
-            value={formData.genre}
-            onChange={handleChange}
-            required
-          />
-        </label></div>
-        <div className="devb">
-          <label>Description:
-          <textarea
-            type="text"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </label>
-        </div>
-
-        
-      
-        <div><button type="submit">Add</button></div>
-        </div>
+    <div style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <center>
+      <div style={{ backgroundColor: "rgba(128, 128, 128, 0.5)", padding: "20px", borderRadius: "10px", boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}>
+        <h2>Add Book to the Collection</h2>
+        <form onSubmit={handleSubmit} style={{ display: "grid", gap: "10px", maxWidth: "500px" }}>
+          <div>
+            <label>
+              Book Title:
+              <input
+                type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+                required
+                style={{ width: "100%", padding: "5px" }}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Author:
+              <input
+                type="text"
+                name="author"
+                value={formData.author}
+                onChange={handleChange}
+                required
+                style={{ width: "100%", padding: "5px" }}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Genre:
+              <input
+                type="text"
+                name="genre"
+                value={formData.genre}
+                onChange={handleChange}
+                required
+                style={{ width: "100%", padding: "5px" }}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Description:
+              <textarea
+                name="description"
+                value={formData.description}
+                onChange={handleChange}
+                required
+                style={{ width: "100%", padding: "5px" }}
+              ></textarea>
+            </label>
+          </div>
+          <div>
+            <button type="submit" style={{ padding: "10px 20px", background: "#005f75", color: "white", border: "none", cursor: "pointer", borderRadius: "5px" }}>Add</button>
+          </div>
         </form>
-        </center>
-        </div>
-      
+      </div>
+    </center>
+  </div>  
       
   );
 }

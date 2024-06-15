@@ -6,14 +6,14 @@ function EditBook() {
   const { title } = useParams();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    title: "", 
-  author: "", 
-  genre: "", 
-  description: "", 
+    title: "",
+    author: "",
+    genre: "",
+    description: "",
   });
 
   useEffect(() => {
-    const fetchBook= async () => {
+    const fetchBook = async () => {
       try {
         const response = await axios.get(
           `http://localhost:8000/book/get/${title}`
@@ -51,72 +51,69 @@ function EditBook() {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-    <div>
-      <h2><center>Edit Book details</center></h2>
-      <br/>
-      <form onSubmit={handleSubmit}>
-        <table>
-          <tbody>
-            <tr>
-              <td>TITLE:</td>
-              <td>
+    <div style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <center>
+        <div style={{ backgroundColor: "rgba(128, 128, 128, 0.5)", padding: "20px", borderRadius: "10px", boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}>
+          <h2>Edit Book Details</h2>
+          <form onSubmit={handleSubmit} style={{ display: "grid", gap: "10px", maxWidth: "500px" }}>
+            <div>
+              <label>
+                Book Title:
                 <input
                   type="text"
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
-                  style={{ width: "300px" }} // Adjust the width as needed
                   required
+                  style={{ width: "100%", padding: "5px" }}
                 />
-              </td>
-            </tr>
-            <tr>
-              <td>AUTHOR:</td>
-              <td>
+              </label>
+            </div>
+            <div>
+              <label>
+                Author:
                 <input
                   type="text"
                   name="author"
                   value={formData.author}
                   onChange={handleChange}
-                  style={{ width: "300px" }} // Adjust the width as needed
                   required
+                  style={{ width: "100%", padding: "5px" }}
                 />
-              </td>
-            </tr>
-            <tr>
-              <td>GENRE:</td>
-              <td>
+              </label>
+            </div>
+            <div>
+              <label>
+                Genre:
                 <input
                   type="text"
                   name="genre"
                   value={formData.genre}
                   onChange={handleChange}
-                  style={{ width: "300px" }} // Adjust the width as needed
                   required
+                  style={{ width: "100%", padding: "5px" }}
                 />
-              </td>
-            </tr>
-            <tr>
-              <td>DESCRIPTION:</td>
-              <td>
-                <input
-                  type="text"
+              </label>
+            </div>
+            <div>
+              <label>
+                Description:
+                <textarea
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
-                  style={{ width: "300px" }} // Adjust the width as needed
                   required
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br/><center>
-        <button type="submit">Update</button></center>
-      </form>
+                  style={{ width: "100%", padding: "5px" }}
+                ></textarea>
+              </label>
+            </div>
+            <div>
+              <button type="submit" style={{ padding: "10px 20px", background: "#005f75", color: "white", border: "none", cursor: "pointer", borderRadius: "5px" }}>Update</button>
+            </div>
+          </form>
+        </div>
+      </center>
     </div>
-  </div>
   );
 }
 
